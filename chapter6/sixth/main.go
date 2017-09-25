@@ -23,7 +23,7 @@ func muhammedAli(args ...int) int {
 	return greatest
 }
 
-func makeOddGenerator() func() uint {  //this function only returns "0x1093880" 
+func makeOddGenerator() func() uint {   
 	i := uint(1)
 	return func() (ret uint) {
 		ret = i
@@ -47,9 +47,14 @@ func fibonacci(n int) int {
 
 
 func main() {
-	//fmt.Println(makeOddGenerator())
-    //fmt.Println(makeOddGenerator())
-    fmt.Println(fibonacci(8))
+        genfunc1 := makeOddGenerator()
+        genfunc2 := makeOddGenerator()
+
+        fmt.Println(genfunc1())
+        fmt.Println(genfunc2())
+        fmt.Println(genfunc1())
+        fmt.Println(genfunc2())
+        fmt.Println(fibonacci(8))
 
 	fmt.Println(halved(10))
 	fmt.Println(halved(21))
