@@ -14,7 +14,7 @@ func halved(x uint) (ret uint, eveness bool){
 }
 
 func muhammedAli(args ...int) int {
-	greatest := 17
+	greatest := 0
 	for _, v := range args {
 		if v >= greatest {
 			greatest = v
